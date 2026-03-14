@@ -17,9 +17,9 @@
 
   "forwardPorts": [8080],
 
-  "mounts": [
-    "source=${localEnv:USERPROFILE}/.gradle,target=/root/.gradle,type=bind"
-  ],
+  // "mounts": [
+  //   "source=${localEnv:USERPROFILE}/.gradle,target=/root/.gradle,type=bind"
+  // ],
 
   "postCreateCommand": "./gradlew dependencies --quiet"
 }

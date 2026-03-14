@@ -1,0 +1,17 @@
+@host=http://localhost:8080
+
+### root endpoint
+GET {{host}}/
+Content-Type: application/json
+
+### actuator endpoint
+GET {{host}}/actuator
+Content-Type: application/json
+
+### test health endpoint
+GET {{host}}/actuator/health
+Content-Type: application/json
+
+### test hello endpoint
+GET {{host}}/test/hello
+Content-Type: application/json
