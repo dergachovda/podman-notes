@@ -1,0 +1,25 @@
+{
+  "name": "Spring Boot Java 25",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vmware.vscode-spring-boot",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle",
+        "humao.rest-client"
+      ]
+    }
+  },
+
+  "forwardPorts": [8080],
+
+  "mounts": [
+    "source=${localEnv:USERPROFILE}/.gradle,target=/root/.gradle,type=bind"
+  ],
+
+  "postCreateCommand": "./gradlew dependencies --quiet"
+}
